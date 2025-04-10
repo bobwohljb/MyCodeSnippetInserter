@@ -19,10 +19,10 @@ import javax.swing.Box
 import javax.swing.JPanel
 
 /**
- * The main UI component for the MyKotlinInserter tool window.
+ * The main UI component for the MyKotlinCodeSnippets tool window.
  * This class creates a panel with buttons for each available Kotlin code snippet action.
  */
-class MyKotlinInserterToolWindow(private val project: Project, private val toolWindow: ToolWindow) {
+class MyKotlinCodeSnippetsToolWindow(private val project: Project, private val toolWindow: ToolWindow) {
 
     /**
      * Creates and returns the content for the tool window.
@@ -32,21 +32,12 @@ class MyKotlinInserterToolWindow(private val project: Project, private val toolW
         val mainPanel = JBPanel<JBPanel<*>>()
         mainPanel.layout = BorderLayout()
 
-        // Create a panel for the title and description
+        // Create a panel for the title
         val titlePanel = JBPanel<JBPanel<*>>()
-        titlePanel.layout = BoxLayout(titlePanel, BoxLayout.Y_AXIS)
-        titlePanel.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
-
-        // Add title label
-        val titleLabel = JBLabel("MyKotlinCodeInserter")
-        titleLabel.alignmentX = JComponent.LEFT_ALIGNMENT
-        titlePanel.add(titleLabel)
-
-        // Add description label
-        val descriptionLabel = JBLabel("Quickly insert common Kotlin code patterns: data classes, singletons, extension functions, and coroutine patterns.")
-        descriptionLabel.alignmentX = JComponent.LEFT_ALIGNMENT
-        descriptionLabel.border = BorderFactory.createEmptyBorder(5, 0, 0, 0)
-        titlePanel.add(descriptionLabel)
+        titlePanel.layout = BorderLayout()
+        val titleLabel = JBLabel("MyKotlinCodeSnippets")
+        titleLabel.border = BorderFactory.createEmptyBorder(10, 10, 10, 10)
+        titlePanel.add(titleLabel, BorderLayout.CENTER)
 
         // Create a panel for the buttons with BoxLayout for vertical arrangement
         val buttonsPanel = JBPanel<JBPanel<*>>()
@@ -91,7 +82,7 @@ class MyKotlinInserterToolWindow(private val project: Project, private val toolW
             }
 
             // Add buttons to the panel
-            //actionPanel.add(insertButton)
+            actionPanel.add(insertButton)
             actionPanel.add(createButton)
 
             // Add the panel to the buttons panel

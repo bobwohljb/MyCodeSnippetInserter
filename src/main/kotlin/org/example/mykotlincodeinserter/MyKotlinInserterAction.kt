@@ -1,4 +1,4 @@
-package org.example.mycodesnippetinserter
+package org.example.mykotlincodeinserter
 
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.project.Project
@@ -11,7 +11,7 @@ import javax.swing.Icon
  * Action that shows a popup dialog with all available Kotlin code snippet inserters.
  * When an option is selected, it executes the corresponding action.
  */
-class MyKotlinCodeSnippetsAction : AnAction() {
+class MyKotlinInserterAction : AnAction() {
 
     override fun actionPerformed(e: AnActionEvent) {
         val project = e.project ?: return

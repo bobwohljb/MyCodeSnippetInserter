@@ -1,4 +1,4 @@
-package org.example.mycodesnippetinserter
+package org.example.mykotlincodeinserter
 
 import com.intellij.openapi.actionSystem.AnActionEvent
 

@@ -1,4 +1,4 @@
-package org.example.mycodesnippetinserter
+package org.example.mykotlincodeinserter
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.command.WriteCommandAction

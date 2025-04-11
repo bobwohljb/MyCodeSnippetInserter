@@ -1,11 +1,11 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>org.example.MyCodeSnippetInserter</id>
+    <id>org.example.MyKotlinCodeInserter</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>MyCodeSnippetInserter</name>
+    <name>MyKotlinCodeInserter</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="example@example.com" url="https://github.com/example/my-kotlin-snippets">My Kotlin Snippets Team</vendor>
@@ -35,7 +35,7 @@
         <!-- Tool window for MyKotlinInserter -->
         <toolWindow id="MyKotlinInserter"
                    anchor="right"
-                   factoryClass="org.example.mycodesnippetinserter.MyKotlinInserterToolWindowFactory"
+                   factoryClass="org.example.mykotlincodeinserter.MyKotlinInserterToolWindowFactory"
                    icon="AllIcons.General.Add"/>
     </extensions>
 
@@ -43,7 +43,7 @@
     <actions>
         <!-- MyKotlinInserter action -->
         <action id="MyKotlinSnippets.Inserter"
-                class="org.example.mycodesnippetinserter.MyKotlinInserterAction"
+                class="org.example.mykotlincodeinserter.MyKotlinInserterAction"
                 text="MyKotlinInserter"
                 description="Show a popup with all available Kotlin code snippets">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
@@ -60,7 +60,7 @@
 
             <!-- Data class action -->
             <action id="MyKotlinSnippets.DataClass"
-                    class="org.example.mycodesnippetinserter.DataClassHandler"
+                    class="org.example.mykotlincodeinserter.DataClassHandler"
                     text="Insert Data Class"
                     description="Insert a Kotlin data class template">
                 <keyboard-shortcut keymap="$default" first-keystroke="alt shift D"/>
@@ -68,7 +68,7 @@
 
             <!-- Singleton action -->
             <action id="MyKotlinSnippets.Singleton"
-                    class="org.example.mycodesnippetinserter.SingletonHandler"
+                    class="org.example.mykotlincodeinserter.SingletonHandler"
                     text="Insert Singleton"
                     description="Insert a Kotlin singleton pattern template">
                 <keyboard-shortcut keymap="$default" first-keystroke="alt shift S"/>
@@ -76,7 +76,7 @@
 
             <!-- Extension function action -->
             <action id="MyKotlinSnippets.ExtensionFunction"
-                    class="org.example.mycodesnippetinserter.ExtensionFunctionHandler"
+                    class="org.example.mykotlincodeinserter.ExtensionFunctionHandler"
                     text="Insert Extension Functions"
                     description="Insert Kotlin extension function templates">
                 <keyboard-shortcut keymap="$default" first-keystroke="alt shift E"/>
@@ -84,7 +84,7 @@
 
             <!-- Coroutine action -->
             <action id="MyKotlinSnippets.Coroutine"
-                    class="org.example.mycodesnippetinserter.CoroutineHandler"
+                    class="org.example.mykotlincodeinserter.CoroutineHandler"
                     text="Insert Coroutine Patterns"
                     description="Insert Kotlin coroutine pattern templates">
                 <keyboard-shortcut keymap="$default" first-keystroke="alt shift C"/>

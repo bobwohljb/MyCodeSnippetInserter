@@ -14,13 +14,15 @@ This plugin provides multiple ways to access common Kotlin code patterns:
 4. **Coroutine Patterns** - Insert Kotlin coroutine patterns for asynchronous programming.
 
 You can access these patterns through:
-- The "My Kotlin Snippets" group in the Code menu
-- A dedicated tool window
+- The "My Kotlin Snippets" group in the Code menu (for inserting into existing files)
+- A dedicated tool window (for creating new files with snippets)
 - A popup dialog from the Tools menu
 
 ## Usage
 
 ### Inserting Code Snippets
+
+To insert code snippets into an existing file:
 
 1. Open a Kotlin file in the editor
 2. Place the cursor where you want to insert the code
@@ -31,12 +33,11 @@ You can access these patterns through:
      - **Alt+Shift+S** - Insert Singleton
      - **Alt+Shift+E** - Insert Extension Functions
      - **Alt+Shift+C** - Insert Coroutine Patterns
-   - Open the MyKotlinInserter tool window (right sidebar) and click the "Insert" button for the desired pattern
    - Go to Tools → MyKotlinInserter to open a popup dialog with all available patterns
 
 ### Creating New Files with Snippets
 
-You can also create new files that already contain the code snippets:
+To create new files that already contain the code snippets:
 
 1. Open the MyKotlinInserter tool window (right sidebar)
 2. Click the "Create File" button for the desired pattern
